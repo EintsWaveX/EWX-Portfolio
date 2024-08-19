@@ -570,6 +570,12 @@ section { position: relative; }
 /* PROJECTS Section: FINISHED */
 
 /* CONTACTS Section: STARTED */
+.above-contacts {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
 .contacts-container {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
@@ -627,7 +633,7 @@ footer .nav-links {
 /* Footer Section: FINISHED */
 
 /* MEDIA */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .about-container {
         gap: 30px;
     } .life-education {
@@ -640,6 +646,10 @@ footer .nav-links {
 }
 
 @media (max-width: 991px) {
+    nav {
+        height: 5rem;
+    }
+
     .logo {
         display: none;
     } .nav-links {
@@ -655,7 +665,7 @@ footer .nav-links {
     } .header-icons {
         width: 48px;
     } .header-left {
-        width: 67.5%;
+        width: 80%;
         margin: 0 auto;
     } .header-right {
         padding-top: 2rem;
@@ -687,7 +697,9 @@ footer .nav-links {
         font-size: 16px;
     }
 
-    .nav-links a {
+    nav {
+        height: 4rem;
+    } .nav-links a {
         font-size: 18px;
     }
 
@@ -748,6 +760,7 @@ footer .nav-links {
     } footer p {
         font-size: 16px;
     } footer .nav-links {
+        padding-top: 2rem;
         width: 100%;
         justify-content: center;
         margin: 0 auto;
@@ -772,7 +785,9 @@ footer .nav-links {
         font-size: 14px;
     }
 
-    .nav-links {
+    nav {
+        height: 3rem;
+    } .nav-links {
         justify-content: space-between;
         gap: 0;
     } .nav-links a {
