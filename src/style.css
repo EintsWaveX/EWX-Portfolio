@@ -24,6 +24,7 @@
     --color-purple: rgb(237, 208, 245);
     --color-purple-ht: rgba(237, 208, 245, 0.5);
     --color-aqua: rgb(127, 255, 212);
+    --color-oceanid: #5fccff;
     --color-aqua-ht: rgba(127, 255, 212, 0.5);
 
     --transition: 0.25s ease;
@@ -103,11 +104,6 @@ h1 {
     font-weight: 400;
 }
 
-.heading {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
 p {
     /* font-size: 18px; */
     font-size: 1.3vw;
@@ -115,7 +111,10 @@ p {
     color: var(--color-dark-variant);
 }
 
-.heading-p {
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+} .heading-p {
     text-align: center;
     padding-top: 9rem;
 }
@@ -126,13 +125,17 @@ a {
     color: var(--color-black);
     text-decoration-color: var(--color-white);
     transition: var(--transition);
-}
-
-a:hover {
-    color: var(--color-dark);
-    text-decoration-color: var(--color-dark-variant) !important;
+} a:hover {
+    /* color: var(--color-dark); */
+    /* text-decoration-color: var(--color-dark-variant) !important;
+    text-underline-offset: 0.5rem;
+    text-decoration: underline; */
+    color: var(--color-oceanid);
+    text-decoration-color: var(--color-oceanid) !important;
     text-underline-offset: 0.5rem;
     text-decoration: underline;
+    letter-spacing: 0.15rem;
+    transition: 0.25s ease;
 }
 
 .button {
@@ -236,11 +239,17 @@ nav {
 
 .logo {
     /* font-size: 32px; */
+    display: flex;
+    align-items: center;
     font-size: 2.5vw;
     color: var(--color-black) !important;
     text-decoration: none !important;
-    display: flex;
-    align-items: center;
+    transition: 0.25s ease;
+} .logo:hover {
+    color: var(--color-oceanid) !important;
+    letter-spacing: 0.25rem;
+    text-decoration: none !important;
+    transition: 0.25s ease;
 }
 
 .nav-links {
@@ -634,6 +643,30 @@ footer .nav-links {
 
 /* MEDIA */
 @media (max-width: 1080px) {
+    h1 {
+        font-size: 34px;
+    } h2 {
+        font-size: 26px;
+    } h3 {
+        font-size: 22px;
+    } h4 {
+        font-size: 18px;
+    } h5 {
+        font-size: 16px;
+    } p {
+        font-size: 16px;
+    } .button {
+        font-size: 14px;
+    }
+
+    .header-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
     .about-container {
         gap: 30px;
     } .life-education {
@@ -643,9 +676,50 @@ footer .nav-links {
     } .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .education-box1 {
+        max-width: 47.5%;
+    } .education-box2 {
+        max-width: 47.5%;
+    } .education-box3 {
+        max-width: 47.5%;
+    } .education-box4 {
+        max-width: 47.5%;
+    }
+
+    .experiences-container {
+        grid-template-columns: repeat(2, 2fr);
+    } .experience-box {
+        padding: 24px;
+        height: 28.5%;
+    } .experience {
+        gap: 28px;
+    } .ex-div {
+        gap: 16px;
+    }
+
+    footer .nav-links a {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 991px) {
+    h1 {
+        font-size: 32px;
+    } h2 {
+        font-size: 24px;
+    } h3 {
+        font-size: 20px;
+    } h4 {
+        font-size: 16px;
+    } h5 {
+        font-size: 14px;
+    } p {
+        font-size: 16px;
+    } .button {
+        font-size: 12px;
+    }
+    
     nav {
         height: 5rem;
     }
@@ -665,7 +739,8 @@ footer .nav-links {
     } .header-icons {
         width: 48px;
     } .header-left {
-        width: 80%;
+        width: 100%;
+        height: auto;
         margin: 0 auto;
     } .header-right {
         padding-top: 2rem;
@@ -679,6 +754,21 @@ footer .nav-links {
         max-width: 57.5%;
     } .education-box4 {
         max-width: 57.5%;
+    }
+
+    .experiences-container {
+        grid-template-columns: 1fr;
+    } .experience-box {
+        padding: 16px;
+        height: 27.5%;
+    } .experience {
+        gap: 24px;
+    } .ex-div {
+        gap: 12px;
+    }
+
+    footer .nav-links a {
+        font-size: 20px;
     }
 }
 
